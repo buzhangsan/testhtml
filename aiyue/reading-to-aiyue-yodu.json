@@ -1,0 +1,149 @@
+[
+  {
+    "homeUrl": "https://www.yodu.org/qingxiaoshuo",
+    "enable": true,
+    "authorId": "8a86e6b1813b2161553e583153d4d65d",
+    "name": "有度轻小说-阅读仓库转制",
+    "httpConfigs": {
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Mobile/15E148 Safari/604.1"
+      },
+      "useCookies": true
+    },
+    "bookDetail": {
+      "forGetMethod": true,
+      "parser": {
+        "coverUrl": "//span[@class='g_thumb']/img/@src",
+        "statusText": "//p[contains(@class,'_tags')]/strong[3]/span/text()",
+        "typeText": "//p[contains(@class,'_tags')]/strong[2]/span/text()",
+        "wordCount": "//p[contains(@class,'_tags')]/strong[4]/span/text()",
+        "lastUpdateDate": "//p[@class='fs16 c_strong']/small/text()",
+        "desc": "//div[contains(@class,'det-abt')]/p/text()"
+      },
+      "params": {},
+      "url": "@dyn:source.helpId"
+    },
+    "bookWorld": {
+      "轻小说分类": {
+        "nextPageParams": {},
+        "parser": {
+          "author": ".//p[contains(@class,'_tags')]/strong[1]/span/text()",
+          "_1": {
+            "dirURL": [
+              ".//a[contains(@class,'c_strong')][1]/@href",
+              "concat('https://www.yodu.org',.)"
+            ],
+            "helpId": [
+              ".//a[contains(@class,'c_strong')][1]/@href",
+              "concat('https://www.yodu.org',.)"
+            ]
+          },
+          "_list": "//ul[contains(@class,'j_bookList')]/li",
+          "bookName": ".//a[contains(@class,'c_strong')][1]/@title",
+          "coverUrl": ".//img/@_src",
+          "statusText": ".//p[contains(@class,'_tags')]/strong[3]/span/text()",
+          "typeText": ".//p[contains(@class,'_tags')]/strong[2]/span/text()",
+          "desc": ".//a[contains(@class,'_p')]/text()"
+        },
+        "forGetMethod": true,
+        "params": {},
+        "urls": [
+          {
+            "sex": 2,
+            "name": "全部轻小说",
+            "url": "https://www.yodu.org/qingxiaoshuo/1.html"
+          },
+          {
+            "sex": 2,
+            "name": "电击文库",
+            "url": "https://www.yoduzw.com/dianjiwenku/1.html"
+          },
+          {
+            "sex": 2,
+            "name": "富士见文库",
+            "url": "https://www.yoduzw.com/fushijianwenku/1.html"
+          },
+          {
+            "sex": 2,
+            "name": "角川文库",
+            "url": "https://www.yoduzw.com/jiaochuanwenku/1.html"
+          },
+          {
+            "sex": 2,
+            "name": "MF文库J",
+            "url": "https://www.yoduzw.com/MFwenkuJ/1.html"
+          },
+          {
+            "sex": 2,
+            "name": "GA文库",
+            "url": "https://www.yoduzw.com/GAwenku/1.html"
+          }
+        ],
+        "maxPageCount": "30",
+        "nextPageForGetMedthod": true,
+        "nextPageUrl": [
+          "//div[@id='pagelink']/a[@class='next']/@href",
+          "concat('https://www.yodu.org',.)"
+        ]
+      }
+    },
+    "chapterDetail": {
+      "forGetMethod": true,
+      "parser": {
+        "content": "//div[@id='TextContent']/p/text()"
+      },
+      "params": {}
+    },
+    "weight": 9,
+    "priorityEncoding": 4,
+    "needSupportDynTask": true,
+    "sourceDetail": {
+      "forGetMethod": true,
+      "parser": {
+        "lastChapterTitle": "//a[contains(@class,'lst-chapter')]/text()",
+        "lastUpdateDate": "//p[@class='fs16 c_strong']/small/text()",
+        "_1": {
+          "_list": "//ol[@id='chapterList']/li[a]",
+          "title": ".//span/text()",
+          "url": [
+            ".//a/@href",
+            "concat('https://www.yodu.org',.)"
+          ]
+        }
+      },
+      "params": {}
+    },
+    "lastModifyTime": "2026-04-04 22:38:00",
+    "responseType": 0,
+    "searchBook": {
+      "nextPageParams": {},
+      "parser": {
+        "author": ".//em/span[contains(@class,'vam mr10')][2]/text()",
+        "_1": {
+          "dirURL": [
+            ".//h3/a/@href",
+            "concat('https://www.yodu.org',.)"
+          ],
+          "helpId": [
+            ".//h3/a/@href",
+            "concat('https://www.yodu.org',.)"
+          ],
+          "lastChapterTitle": ".//p[contains(@class,'ttc')]/span/a/text()"
+        },
+        "_list": "//ul[contains(@class,'ser-ret')]/li",
+        "bookName": ".//h3/a/@title",
+        "coverUrl": ".//a[contains(@class,'g_thumb')]/img/@_src",
+        "typeText": ".//em/span[contains(@class,'vam mr10')][1]/text()",
+        "desc": ".//p[contains(@class,'g_ells')]/text()"
+      },
+      "forGetMethod": false,
+      "params": {
+        "searchkey": "%@",
+        "searchtype": "all"
+      },
+      "nextPageForGetMedthod": false,
+      "maxPageCount": "1",
+      "url": "https://www.yodu.org/sa"
+    }
+  }
+]
