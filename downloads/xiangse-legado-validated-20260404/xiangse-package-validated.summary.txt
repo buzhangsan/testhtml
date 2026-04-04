@@ -1,0 +1,63 @@
+Legado -> Xiangse 实测验证版
+
+输入文件: /tmp/tickmao_novel/sources/legado/full.json
+候选验证数: 119
+实测通过数: 32
+收录数: 32
+通过标准: search non-empty + detail fetch + toc non-empty + content >= 80 chars or >= 20 CJK chars
+
+收录源：
+- 何以生肖 | 搜索=True 详情=True 目录=True 正文=True | 第二百三十六章 大结局，最后一个条件（全书完） (8931 chars)
+- 快眼看书 | 搜索=True 详情=True 目录=True 正文=True | 引子 穿越的唐家三少 (2602 chars)
+- 盗墓笔记 | 搜索=True 详情=True 目录=True 正文=True | 沙海1 荒沙诡影 引子（一） (1604 chars)
+- 书法小说 | 搜索=True 详情=True 目录=True 正文=True | 1 新人生 (1501 chars)
+- 飞卢小说 | 搜索=True 详情=True 目录=True 正文=True | 第一章 系统觉醒 (3027 chars)
+- 殓师灵异 | 搜索=True 详情=True 目录=True 正文=True | 第二百三十六章 大结局，最后一个条件（全书完） (8856 chars)
+- 去读书啊 | 搜索=True 详情=True 目录=True 正文=True | 第一章 斗罗大陆，异界唐三（一） (2032 chars)
+- 快眼看书 | 搜索=True 详情=True 目录=True 正文=True | 引子 穿越的唐家三少 (2602 chars)
+- 追书神器 | 搜索=True 详情=True 目录=True 正文=True | 第一章 冲突，离开 (2986 chars)
+- 落霞小说 | 搜索=True 详情=True 目录=True 正文=True | 引子 神界！唐三一家 (1589 chars)
+- PO文学 | 搜索=True 详情=True 目录=True 正文=True | 离家出走 (994 chars)
+- 乡土小说 | 搜索=True 详情=True 目录=True 正文=True | 第一章 废武魂 (2095 chars)
+- 全本同人小说 | 搜索=True 详情=True 目录=True 正文=True | 第1节 (2173 chars)
+- 梧桐中文 | 搜索=True 详情=True 目录=True 正文=True | 第1章 神秘任务 (2219 chars)
+- 天天书吧 | 搜索=True 详情=True 目录=True 正文=True | 引子 穿越的唐家三少 (3002 chars)
+- 书海阁小说 | 搜索=True 详情=True 目录=True 正文=True | 鲛人之饵 (30 chars)
+- 下书网 | 搜索=True 详情=True 目录=True 正文=True | 霸道总裁的俏秘书② (216 chars)
+- 五二书库 | 搜索=True 详情=True 目录=True 正文=True | 第1页 (29 chars)
+- 顶点小说 | 搜索=True 详情=True 目录=True 正文=True | 小三书友团体－“唐门”正式成立。 (400 chars)
+- 精彩东方 | 搜索=True 详情=True 目录=True 正文=True | 第1章 穿越斗罗 (3369 chars)
+- 笔尚小说 | 搜索=True 详情=True 目录=True 正文=True | 第一卷江湖路 第一章 族灭一生还 (1911 chars)
+- 空白小说 | 搜索=True 详情=True 目录=True 正文=True | 第二百三十六章 大结局，最后一个条件（全书完） (8814 chars)
+- 躺着看小说 | 搜索=True 详情=True 目录=True 正文=True | 黑暗斗罗大陆（01） (1619 chars)
+- 笔趣阁 | 搜索=True 详情=True 目录=True 正文=True | 引子 穿越的唐家三少 (3103 chars)
+- 圣墟小说网 | 搜索=True 详情=True 目录=True 正文=True | 第二百三十六章 大结局，最后一个条件（全书完） (8798 chars)
+- 笔趣阁 | 搜索=True 详情=True 目录=True 正文=True | 第三百三十六章 大结局，最后一个条件（全书完） (8008 chars)
+- 第一版主 | 搜索=True 详情=True 目录=True 正文=True | 《绿在斗罗大陆》（引子） (613 chars)
+- 爱久久网 | 搜索=True 详情=True 目录=True 正文=True | 斗罗大陆V重生唐三 第1节 (3965 chars)
+- 御宅屋 | 搜索=True 详情=True 目录=True 正文=True | 《绿在斗罗大陆》（引子） (641 chars)
+- 天涯在线书库 | 搜索=True 详情=True 目录=True 正文=True | 楔子 (2087 chars)
+- 飞卢小说 | 搜索=True 详情=True 目录=True 正文=True | 第一章 系统觉醒 (40 chars)
+- 红袖添香 | 搜索=True 详情=True 目录=True 正文=True | 小三书友团体－“唐门”正式成立。 (596 chars)
+
+未通过样例：
+- 书包小说网 | 搜索=False 详情=True 目录=False 正文=False | chapter list empty
+- 第一版主 | 搜索=False 详情=False 目录=False 正文=False | search validation failed
+- 阅读电子书屋 | 搜索=True 详情=True 目录=False 正文=False | chapter list empty
+- 废文网 | 搜索=False 详情=False 目录=False 正文=False | contains java.* runtime
+- 书旗小说 | 搜索=False 详情=False 目录=False 正文=False | unsupported ruleSearch.bookList: json
+- 版本读书 | 搜索=False 详情=False 目录=False 正文=False | search validation failed
+- 华龙文学 | 搜索=False 详情=False 目录=False 正文=False | contains java.* runtime
+- 御书屋 | 搜索=False 详情=False 目录=False 正文=False | search validation failed
+- 爱推书君 | 搜索=False 详情=False 目录=False 正文=False | contains java.* runtime
+- 肉书屋 | 搜索=False 详情=False 目录=False 正文=False | HTTPSConnectionPool(host='m.roushuwu.com', port=443): Read timed out. (read timeout=6)
+- 番茄免密钥版本 | 搜索=False 详情=False 目录=False 正文=False | unsupported ruleSearch.bookList: json
+- 中国古典 | 搜索=False 详情=False 目录=False 正文=False | contains java.* runtime
+- 小说阅读网 | 搜索=False 详情=False 目录=False 正文=False | contains java.* runtime
+- 太极书吧 | 搜索=False 详情=False 目录=False 正文=False | contains java.* runtime
+- 追书神器 | 搜索=False 详情=False 目录=False 正文=False | contains java.* runtime
+- 奇妙小说网 | 搜索=False 详情=False 目录=False 正文=False | contains java.* runtime
+- 商店小说 | 搜索=False 详情=False 目录=False 正文=False | search validation failed
+- 晋江古代 | 搜索=False 详情=False 目录=False 正文=False | unsupported ruleSearch.bookList: json
+- 古诗文网 | 搜索=False 详情=False 目录=False 正文=False | unsupported ruleToc.chapterList: compose
+- 免费小说阅读网 | 搜索=True 详情=False 目录=False 正文=False | detail request failed: HTTPConnectionPool(host='www.qb5.io', port=80): Max retries exceeded with url: /xs-1684.html (Caused by NewConnectionError("HTTPConnection(host='www.qb5.io', port=80): Failed to establish a new connection: [Errno 113] No route to host"))
