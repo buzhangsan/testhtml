@@ -1,0 +1,1608 @@
+{
+  "input_path": "/tmp/tickmao_novel/sources/legado/full.json",
+  "input_pick_note": "preferred input rejected: Expecting value: line 1 column 1 (char 0); fallback input selected",
+  "total_input_count": 299,
+  "requested_max_sources": 200,
+  "selected_count": 200,
+  "selected_java_count": 5,
+  "excluded_count": 99,
+  "selected_complexity_avg": 51.25,
+  "selected_complexity_min": 0,
+  "selected_complexity_max": 179,
+  "output_json": "out/xiangse_package.json",
+  "top_selection_notes": [
+    "searchUrl has legacy option object: 86",
+    "contains java.*: 5",
+    "searchUrl uses @js: 2",
+    "ruleSearch missing core fields: 1: 1"
+  ],
+  "selected_sources": [
+    {
+      "index": 88,
+      "name": "冰河湾小说",
+      "complexity": 0,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 109,
+      "name": "话本小说",
+      "complexity": 0,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 117,
+      "name": "何以生肖",
+      "complexity": 0,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 128,
+      "name": "相思阁",
+      "complexity": 0,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 217,
+      "name": "画本阅读",
+      "complexity": 0,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 256,
+      "name": "双语小说",
+      "complexity": 0,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 55,
+      "name": "炎上书屋",
+      "complexity": 1,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 73,
+      "name": "熊猫文学",
+      "complexity": 1,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 145,
+      "name": "无线电子",
+      "complexity": 1,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 174,
+      "name": "百合爱会",
+      "complexity": 1,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 53,
+      "name": "晋江文学城",
+      "complexity": 2,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 137,
+      "name": "安轻小说",
+      "complexity": 2,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 90,
+      "name": "我爱读者",
+      "complexity": 3,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 247,
+      "name": "双语小说",
+      "complexity": 3,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 20,
+      "name": "快眼看书",
+      "complexity": 4,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 258,
+      "name": "卧龍小说",
+      "complexity": 5,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 156,
+      "name": "多多书院",
+      "complexity": 6,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 187,
+      "name": "久久小说网",
+      "complexity": 6,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 241,
+      "name": "盗墓笔记",
+      "complexity": 6,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 29,
+      "name": "番茄小说",
+      "complexity": 7,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 49,
+      "name": "地缘BL小说网",
+      "complexity": 7,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 114,
+      "name": "找故事网",
+      "complexity": 7,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 21,
+      "name": "商店小说",
+      "complexity": 8,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 24,
+      "name": "免费小说阅读网",
+      "complexity": 10,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 278,
+      "name": "風月文學網",
+      "complexity": 11,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 205,
+      "name": "夜伴书屋GE",
+      "complexity": 12,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 225,
+      "name": "笔趣阁",
+      "complexity": 12,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 242,
+      "name": "精品UU小说网uu",
+      "complexity": 13,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 42,
+      "name": "独步小说",
+      "complexity": 15,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 206,
+      "name": "骑士小说",
+      "complexity": 15,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 244,
+      "name": "书法小说",
+      "complexity": 15,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 79,
+      "name": "飞卢小说",
+      "complexity": 16,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 289,
+      "name": "中意文学",
+      "complexity": 16,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 196,
+      "name": "灵感小说",
+      "complexity": 17,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 208,
+      "name": "心轻小说",
+      "complexity": 18,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 123,
+      "name": "笔趣阁",
+      "complexity": 19,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 133,
+      "name": "殓师灵异",
+      "complexity": 19,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 140,
+      "name": "去读书啊",
+      "complexity": 19,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 262,
+      "name": "国外小说",
+      "complexity": 19,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 77,
+      "name": "快眼看书",
+      "complexity": 20,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 161,
+      "name": "肉文屋",
+      "complexity": 20,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 191,
+      "name": "笔迷读",
+      "complexity": 21,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 1,
+      "name": "第一版主",
+      "complexity": 22,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "版本读书",
+      "complexity": 22,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 176,
+      "name": "独阅读网",
+      "complexity": 22,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 110,
+      "name": "纪念小说",
+      "complexity": 24,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 180,
+      "name": "神话之后",
+      "complexity": 24,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 43,
+      "name": "刺猬猫",
+      "complexity": 25,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 129,
+      "name": "企鹅浏览",
+      "complexity": 25,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 25,
+      "name": "追书神器",
+      "complexity": 26,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 58,
+      "name": "老包输站",
+      "complexity": 26,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 61,
+      "name": "经典书库",
+      "complexity": 26,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 229,
+      "name": "不可能世界",
+      "complexity": 26,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 284,
+      "name": "不可能世界",
+      "complexity": 26,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 17,
+      "name": "落霞小说",
+      "complexity": 27,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 26,
+      "name": "文徒小说",
+      "complexity": 27,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 127,
+      "name": "第一版主",
+      "complexity": 28,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 288,
+      "name": "PO文学",
+      "complexity": 28,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 57,
+      "name": "九九读小说",
+      "complexity": 29,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 190,
+      "name": "男友书屋",
+      "complexity": 29,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 252,
+      "name": "笔趣阁",
+      "complexity": 29,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 290,
+      "name": "栀子欢网",
+      "complexity": 29,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 275,
+      "name": "天地中文",
+      "complexity": 30,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 86,
+      "name": "绾书文学",
+      "complexity": 31,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 103,
+      "name": "笔趣阁",
+      "complexity": 31,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 175,
+      "name": "独阅读网",
+      "complexity": 31,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 203,
+      "name": "绾书文学网",
+      "complexity": 31,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 248,
+      "name": "扎堆小说",
+      "complexity": 31,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 259,
+      "name": "独阅读网",
+      "complexity": 31,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 6,
+      "name": "乡土小说",
+      "complexity": 32,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 62,
+      "name": "全本同人小说",
+      "complexity": 32,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 152,
+      "name": "布咕阅读",
+      "complexity": 32,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 155,
+      "name": "梧桐中文",
+      "complexity": 32,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 2,
+      "name": "阅读电子书屋",
+      "complexity": 33,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 64,
+      "name": "绾书文学",
+      "complexity": 33,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 183,
+      "name": "飞翔中文",
+      "complexity": 33,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 31,
+      "name": "笔趣阁",
+      "complexity": 34,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 107,
+      "name": "天天小说",
+      "complexity": 34,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 204,
+      "name": "天天书吧",
+      "complexity": 34,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 213,
+      "name": "笔趣阁",
+      "complexity": 34,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 0,
+      "name": "书包小说网",
+      "complexity": 35,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 80,
+      "name": "绾书文学网",
+      "complexity": 35,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 119,
+      "name": "天天书吧",
+      "complexity": 35,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 100,
+      "name": "书海阁小说",
+      "complexity": 36,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 212,
+      "name": "轻次元姬",
+      "complexity": 36,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 283,
+      "name": "九怀文学",
+      "complexity": 36,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 104,
+      "name": "企鹅浏览",
+      "complexity": 37,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 201,
+      "name": "零点小说",
+      "complexity": 37,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 250,
+      "name": "泽夜书吧",
+      "complexity": 37,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 271,
+      "name": "中华典藏",
+      "complexity": 37,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 194,
+      "name": "古龙武侠",
+      "complexity": 38,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 5,
+      "name": "书旗小说",
+      "complexity": 39,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 12,
+      "name": "下书网",
+      "complexity": 39,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 39,
+      "name": "海词精选",
+      "complexity": 40,
+      "has_java": false,
+      "notes": [
+        "ruleSearch missing core fields: 1"
+      ]
+    },
+    {
+      "index": 141,
+      "name": "五二书库",
+      "complexity": 40,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 69,
+      "name": "小说屋",
+      "complexity": 41,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 130,
+      "name": "猫九小说",
+      "complexity": 41,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 102,
+      "name": "顶点小说",
+      "complexity": 42,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 223,
+      "name": "笔尖小说",
+      "complexity": 42,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 158,
+      "name": "文学作品",
+      "complexity": 43,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 67,
+      "name": "精彩东方",
+      "complexity": 44,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 87,
+      "name": "六九书吧",
+      "complexity": 44,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 84,
+      "name": "新御书屋",
+      "complexity": 45,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 270,
+      "name": "ESJ",
+      "complexity": 45,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 277,
+      "name": "上古卷轴",
+      "complexity": 45,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 40,
+      "name": "页书小说",
+      "complexity": 46,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 139,
+      "name": "全本小说",
+      "complexity": 46,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 173,
+      "name": "龙腾小说城",
+      "complexity": 46,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 260,
+      "name": "若晨文学",
+      "complexity": 46,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 287,
+      "name": "妙书阁吧",
+      "complexity": 46,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 291,
+      "name": "笔尚小说",
+      "complexity": 46,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 184,
+      "name": "空白小说",
+      "complexity": 47,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 188,
+      "name": "啦啦书屋",
+      "complexity": 47,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 92,
+      "name": "若晨文学",
+      "complexity": 48,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 148,
+      "name": "躺着看小说",
+      "complexity": 48,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 230,
+      "name": "笔趣阁",
+      "complexity": 48,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 219,
+      "name": "绾书文学",
+      "complexity": 49,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 232,
+      "name": "企鹅阅读",
+      "complexity": 49,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 235,
+      "name": "有乐中文",
+      "complexity": 49,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 142,
+      "name": "去读书",
+      "complexity": 50,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 273,
+      "name": "爱爱中文网",
+      "complexity": 50,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 91,
+      "name": "2手机小说",
+      "complexity": 51,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 209,
+      "name": "若初文学",
+      "complexity": 51,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 243,
+      "name": "圣墟小说网",
+      "complexity": 51,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 138,
+      "name": "肉宅屋网",
+      "complexity": 52,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 144,
+      "name": "新御书屋",
+      "complexity": 52,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 163,
+      "name": "顶点小说",
+      "complexity": 52,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 167,
+      "name": "月下独酌",
+      "complexity": 53,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 297,
+      "name": "笔趣阁",
+      "complexity": 53,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 27,
+      "name": "QQ阅读",
+      "complexity": 54,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 36,
+      "name": "全本同人",
+      "complexity": 56,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 169,
+      "name": "完本阁子",
+      "complexity": 56,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "番茄免密钥版本",
+      "complexity": 57,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 214,
+      "name": "矮贼吧网",
+      "complexity": 59,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 221,
+      "name": "梦笔阁小说网",
+      "complexity": 60,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 74,
+      "name": "望书阁网",
+      "complexity": 64,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 224,
+      "name": "酷匠网",
+      "complexity": 65,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 89,
+      "name": "爱久久网",
+      "complexity": 66,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 198,
+      "name": "周易易学",
+      "complexity": 66,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 261,
+      "name": "好汉中文",
+      "complexity": 66,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 106,
+      "name": "搜书网",
+      "complexity": 67,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 253,
+      "name": "英语阅读",
+      "complexity": 70,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 257,
+      "name": "大唐小说",
+      "complexity": 70,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 231,
+      "name": "第一版主",
+      "complexity": 71,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 30,
+      "name": "V笔趣阁",
+      "complexity": 72,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 41,
+      "name": "Domain",
+      "complexity": 72,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 294,
+      "name": "灵境行者",
+      "complexity": 74,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 136,
+      "name": "黑岩小说",
+      "complexity": 75,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 75,
+      "name": "请看下载",
+      "complexity": 76,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 280,
+      "name": "参与书库",
+      "complexity": 76,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 111,
+      "name": "爱看漫画",
+      "complexity": 77,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 298,
+      "name": "海棠",
+      "complexity": 77,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 281,
+      "name": "米读看书",
+      "complexity": 78,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 192,
+      "name": "天下书盟",
+      "complexity": 80,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 200,
+      "name": "米读小说",
+      "complexity": 80,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 233,
+      "name": "连尚读书",
+      "complexity": 80,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 264,
+      "name": "中文万维",
+      "complexity": 80,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 177,
+      "name": "爱久久网",
+      "complexity": 82,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 185,
+      "name": "爱久久网",
+      "complexity": 82,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 131,
+      "name": "刺猬猫吧",
+      "complexity": 83,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 181,
+      "name": "第一版主网",
+      "complexity": 84,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 254,
+      "name": "九一中文",
+      "complexity": 85,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 265,
+      "name": "御宅屋",
+      "complexity": 85,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 50,
+      "name": "豆花文学",
+      "complexity": 86,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 164,
+      "name": "奇异网",
+      "complexity": 87,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 220,
+      "name": "多多书院",
+      "complexity": 87,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 228,
+      "name": "爱奇艺漫画",
+      "complexity": 87,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 115,
+      "name": "八零小说",
+      "complexity": 88,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 124,
+      "name": "久久小说",
+      "complexity": 88,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 70,
+      "name": "天涯在线书库",
+      "complexity": 89,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "飞卢小说",
+      "complexity": 90,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 56,
+      "name": "PO文学",
+      "complexity": 90,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 149,
+      "name": "红叶书斋",
+      "complexity": 90,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 159,
+      "name": "红袖添香",
+      "complexity": 90,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 9,
+      "name": "御书屋",
+      "complexity": 91,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 28,
+      "name": "御书屋",
+      "complexity": 91,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 132,
+      "name": "东南书",
+      "complexity": 93,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 207,
+      "name": "飞卢小说",
+      "complexity": 97,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 251,
+      "name": "纵横中文",
+      "complexity": 98,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 157,
+      "name": "七七读书",
+      "complexity": 101,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 22,
+      "name": "晋江古代",
+      "complexity": 103,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 246,
+      "name": "中文书城",
+      "complexity": 106,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 47,
+      "name": "优书网",
+      "complexity": 108,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 97,
+      "name": "古诗词网",
+      "complexity": 108,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 11,
+      "name": "肉书屋",
+      "complexity": 113,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 68,
+      "name": "繁星四月",
+      "complexity": 114,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 59,
+      "name": "甜梦文库",
+      "complexity": 115,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 112,
+      "name": "神漫画",
+      "complexity": 121,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 23,
+      "name": "古诗文网",
+      "complexity": 127,
+      "has_java": false,
+      "notes": []
+    },
+    {
+      "index": 166,
+      "name": "全本小说",
+      "complexity": 132,
+      "has_java": false,
+      "notes": [
+        "searchUrl uses @js",
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 37,
+      "name": "趣书网小说",
+      "complexity": 144,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 121,
+      "name": "第一版主",
+      "complexity": 146,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 274,
+      "name": "蛋文库吧",
+      "complexity": 154,
+      "has_java": false,
+      "notes": [
+        "searchUrl uses @js"
+      ]
+    },
+    {
+      "index": 276,
+      "name": "笔趣阁",
+      "complexity": 173,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 268,
+      "name": "肉肉屋",
+      "complexity": 179,
+      "has_java": false,
+      "notes": [
+        "searchUrl has legacy option object"
+      ]
+    },
+    {
+      "index": 279,
+      "name": "爱下电子",
+      "complexity": 125,
+      "has_java": true,
+      "notes": [
+        "contains java.*"
+      ]
+    },
+    {
+      "index": 272,
+      "name": "爱下电子",
+      "complexity": 131,
+      "has_java": true,
+      "notes": [
+        "contains java.*"
+      ]
+    },
+    {
+      "index": 51,
+      "name": "365book",
+      "complexity": 139,
+      "has_java": true,
+      "notes": [
+        "contains java.*"
+      ]
+    },
+    {
+      "index": 35,
+      "name": "酷匠阅读",
+      "complexity": 141,
+      "has_java": true,
+      "notes": [
+        "contains java.*"
+      ]
+    },
+    {
+      "index": 18,
+      "name": "追书神器",
+      "complexity": 142,
+      "has_java": true,
+      "notes": [
+        "contains java.*"
+      ]
+    }
+  ]
+}

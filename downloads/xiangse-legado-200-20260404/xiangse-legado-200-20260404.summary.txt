@@ -1,0 +1,25 @@
+Legado -> Xiangse Converter Prototype Summary
+
+Input file: /tmp/tickmao_novel/sources/legado/full.json
+Input selection decision: preferred input rejected: Expecting value: line 1 column 1 (char 0); fallback input selected
+Total input sources: 299
+Selected sources: 200
+Selected sources with java.*: 5
+Average selected complexity score: 51.25
+
+Selection strategy:
+- Prefer non-java.* sources first.
+- Then prefer lower complexity rules and fewer missing core fields.
+- If non-java.* pool is insufficient, include lowest-risk java.* sources to reach target.
+
+Likely failure causes after import:
+- searchUrl using @js/java runtime semantics incompatible with Xiangse runtime.
+- advanced Legado parser expressions that Xiangse parser interprets differently.
+- site anti-bot/cookie/login requirements not modeled in this prototype.
+- legacy POST/body/charset declarations needing source-specific manual tuning.
+
+Top selection notes:
+- searchUrl has legacy option object: 86
+- contains java.*: 5
+- searchUrl uses @js: 2
+- ruleSearch missing core fields: 1: 1
