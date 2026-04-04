@@ -1,0 +1,250 @@
+{
+  "input": "/root/legado_xiangse_batch/out/xiangse_true_small.json",
+  "mode": "live",
+  "engine": "auto",
+  "webview_timeout_seconds": 25,
+  "normalization": {
+    "input_type": "json",
+    "decoded_json": "/root/legado_xiangse_batch/out/xiangse_true_small.json",
+    "source_alias": "快眼看书-true",
+    "source_mode": "new",
+    "change_count": 0,
+    "changes": []
+  },
+  "schema_check": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "source_count": 5
+  },
+  "editor_check": {
+    "status": "WARN",
+    "strict": false,
+    "risk_count": 1,
+    "high_risk_count": 0,
+    "medium_risk_count": 1,
+    "risks": [
+      {
+        "level": "medium",
+        "code": "NEW_SCHEMA_WRAPPER",
+        "path": "<top>",
+        "message": "使用新 schema wrapper（sourceName/sourceUrl），请执行编辑页保存回归验证"
+      }
+    ]
+  },
+  "simulation_verdict": {
+    "status": "pass",
+    "pass": true,
+    "blocked_reason": "",
+    "fail_reasons": [],
+    "warnings": [
+      "[searchBook.status] searchBook optional field missing: status",
+      "[searchBook.cat] searchBook optional field missing: cat",
+      "[searchBook.desc] searchBook optional field missing: desc",
+      "[searchBook.cover] searchBook optional field missing: cover",
+      "[bookDetail.cat] bookDetail optional field missing: cat",
+      "[bookDetail.status] bookDetail optional field missing: status",
+      "[bookDetail.lastChapterTitle] bookDetail optional field missing: lastChapterTitle",
+      "[chapterContent.title] chapterContent title is recommended"
+    ]
+  },
+  "overall_verdict": {
+    "status": "pass",
+    "pass": true
+  },
+  "steps": {
+    "searchBook": {
+      "step": "searchBook",
+      "status": "pass",
+      "runtime_engine": "http",
+      "blocked": false,
+      "blocked_reason": "",
+      "elapsed_ms": 734,
+      "request": {
+        "method": "GET",
+        "url": "http://www.23uswx.la/modules/article/search.php?q=斗罗大陆",
+        "http_params_count": 0,
+        "http_header_count": 1
+      },
+      "response": {
+        "status": 200,
+        "url": "http://www.23uswx.la/modules/article/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+        "body_mode": "live",
+        "fixture_used": ""
+      },
+      "parse": {
+        "list_length": 50,
+        "sample_item_keys": [
+          "author",
+          "bookName",
+          "detailUrl",
+          "lastChapterTitle"
+        ],
+        "sample_item": {
+          "bookName": "斗罗大陆",
+          "author": "唐家三少",
+          "detailUrl": "http://www.23uswx.la/0_80/",
+          "lastChapterTitle": "第二百三十六章 大结局，最后一个条件（全书完）"
+        }
+      },
+      "webview_applied_keys": [],
+      "webview_trace": [],
+      "errors": [],
+      "warnings": [
+        "searchBook optional field missing: status",
+        "searchBook optional field missing: cat",
+        "searchBook optional field missing: desc",
+        "searchBook optional field missing: cover"
+      ]
+    },
+    "bookDetail": {
+      "step": "bookDetail",
+      "status": "pass",
+      "runtime_engine": "http",
+      "blocked": false,
+      "blocked_reason": "",
+      "elapsed_ms": 1886,
+      "request": {
+        "method": "GET",
+        "url": "http://www.23uswx.la/0_80/",
+        "http_params_count": 0,
+        "http_header_count": 1
+      },
+      "response": {
+        "status": 200,
+        "url": "http://www.23uswx.la/0_80/",
+        "body_mode": "live",
+        "fixture_used": ""
+      },
+      "parse": {
+        "list_length": 0,
+        "sample_item_keys": [
+          "author",
+          "bookName",
+          "cover",
+          "desc",
+          "tocUrl"
+        ],
+        "sample_item": {
+          "bookName": "斗罗大陆",
+          "author": "唐家三少",
+          "desc": "将会在本周日，斗罗大6结束的同时开始上传更新，麻烦大家先收藏、推荐一下，谢谢。 阴阳冕书号：1436o15 下面的直通车也可以直接点过去。 【小三出品，必属精品，全新设定，酬谢书友】 抢购实体书，尽享五重惊喜好礼",
+          "cover": "http://www.23uswx.la/files/article/image/0/80/80s.jpg",
+          "tocUrl": "http://www.23uswx.la/0_80/"
+        }
+      },
+      "webview_applied_keys": [],
+      "webview_trace": [],
+      "errors": [],
+      "warnings": [
+        "bookDetail optional field missing: cat",
+        "bookDetail optional field missing: status",
+        "bookDetail optional field missing: lastChapterTitle"
+      ]
+    },
+    "chapterList": {
+      "step": "chapterList",
+      "status": "pass",
+      "runtime_engine": "http",
+      "blocked": false,
+      "blocked_reason": "",
+      "elapsed_ms": 915,
+      "request": {
+        "method": "GET",
+        "url": "http://www.23uswx.la/0_80/",
+        "http_params_count": 0,
+        "http_header_count": 1
+      },
+      "response": {
+        "status": 200,
+        "url": "http://www.23uswx.la/0_80/",
+        "body_mode": "live",
+        "fixture_used": ""
+      },
+      "parse": {
+        "list_length": 719,
+        "sample_item_keys": [
+          "title",
+          "url"
+        ],
+        "sample_item": {
+          "title": "小三书友团体－“唐门”正式成立。",
+          "url": "http://www.23uswx.la/0_80/46124.html"
+        }
+      },
+      "webview_applied_keys": [],
+      "webview_trace": [],
+      "errors": [],
+      "warnings": []
+    },
+    "chapterContent": {
+      "step": "chapterContent",
+      "status": "pass",
+      "runtime_engine": "http",
+      "blocked": false,
+      "blocked_reason": "",
+      "elapsed_ms": 73,
+      "request": {
+        "method": "GET",
+        "url": "http://www.23uswx.la/0_80/46124.html",
+        "http_params_count": 0,
+        "http_header_count": 1
+      },
+      "response": {
+        "status": 200,
+        "url": "http://www.23uswx.la/0_80/46124.html",
+        "body_mode": "live",
+        "fixture_used": ""
+      },
+      "parse": {
+        "list_length": 0,
+        "sample_item_keys": [
+          "content"
+        ],
+        "sample_item": {
+          "content": "最新网址：www.23uswx.la 与一些资深书友商量过，很多书友都认为应该将更多的书友组织在一起，让大家更容易相互认识彼此交流。特决定成立“唐门”。 加入的方法很简单，只需要将网上Id修改一下就可以完成。 男书友改为：唐门－xx如：唐门－音竹 女书友改为：唐门=xx如：唐门=苏拉 这样一来，不论在什么地方，大家看到彼此的Id，就知道都是喜欢小三的书友了。更方便相互交流。 “唐门”是一个松散团体，没有刻意的规则。只是希望大家能快乐的在一起。凡是喜欢小三的书友都可以自由加入。一切本着自愿的原则。 斗罗大6将于本周六琴帝结束的同时正式上传，周日晚12点o5召开斗罗大6第一次加精大会，也是唐门成立后第一次全体会议，小三用精华来感谢参加的书友。 最后，谢谢大家，谢谢一直支持小三的兄弟姐妹们。小三努力的把书写的更好，也希望能够看到更多健康的留言支持和你们的推荐。 最新网址：www.23uswx.la"
+        }
+      },
+      "webview_applied_keys": [],
+      "webview_trace": [],
+      "errors": [],
+      "warnings": [
+        "chapterContent title is recommended"
+      ]
+    }
+  },
+  "runtime": {
+    "node_bin": "/usr/bin/node",
+    "validator_root": "/root/clawd/tmp/xiangseSkill/tools/validator",
+    "validator_cli": "/root/clawd/tmp/xiangseSkill/tools/validator/src/cli.js",
+    "command": [
+      "/usr/bin/node",
+      "/root/clawd/tmp/xiangseSkill/tools/validator/src/cli.js",
+      "run",
+      "--input",
+      "/root/clawd/tmp/gotmp/tmp/xbs_sim_3krl14bq/xiangse_true_small.import_fixed.json",
+      "--mode",
+      "live",
+      "--engine",
+      "auto",
+      "--webview-timeout",
+      "25",
+      "--keyword",
+      "斗罗大陆",
+      "--page-index",
+      "1",
+      "--offset",
+      "0",
+      "--book-index",
+      "0",
+      "--chapter-index",
+      "0",
+      "--min-content-length",
+      "80",
+      "--output",
+      "/root/clawd/tmp/gotmp/tmp/xbs_sim_3krl14bq/validator.report.json",
+      "--source-key",
+      "顶点小说-true"
+    ]
+  }
+}

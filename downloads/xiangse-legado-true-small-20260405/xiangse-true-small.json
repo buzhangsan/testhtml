@@ -1,0 +1,340 @@
+{
+  "快眼看书-true": {
+    "sourceName": "快眼看书",
+    "sourceUrl": "http://www.xbotaodz.com",
+    "sourceType": "text",
+    "enable": 1,
+    "weight": "9999",
+    "miniAppVersion": "2.56.1",
+    "lastModifyTime": "1775320061",
+    "searchBook": {
+      "actionID": "searchBook",
+      "parserID": "DOM",
+      "host": "http://www.xbotaodz.com",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "http://www.xbotaodz.com/modules/article/search.php?searchkey=%@keyWord",
+      "list": "//*[contains(concat(' ', normalize-space(@class), ' '), ' librarylist ')]//li",
+      "bookName": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' info ')]//span[1]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' info ')]//span[2]//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s && !/^作者/.test(s); }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "cover": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' pt-ll-l ')]//img/@src ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.xbotaodz.com' + u; return u;",
+      "detailUrl": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' info ')]//span[1]//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.xbotaodz.com' + u; return u;",
+      "lastChapterTitle": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' last ')]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM",
+      "host": "http://www.xbotaodz.com",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "bookName": "//*[contains(concat(' ', normalize-space(@class), ' '), ' w-left ')]//h1/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": "//*[contains(concat(' ', normalize-space(@class), ' '), ' novelinfo-l ')]//li[1]//text() ||@js:var s = Array.isArray(result) ? result.join(' ') : String(result || ''); return s.replace(/作者[:：]\\s*/, '').replace(/\\s+/g, ' ').trim();",
+      "desc": "//*[contains(concat(' ', normalize-space(@class), ' '), ' novelintro ')]//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "cover": "//*[contains(concat(' ', normalize-space(@class), ' '), ' novelinfo-r ')]//img/@src ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.xbotaodz.com' + u; return u;",
+      "tocUrl": "//link[@rel='canonical']/@href ||@js: return String((params && params.responseUrl) || (Array.isArray(result) ? result[0] : result) || '').trim();"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "parserID": "DOM",
+      "host": "http://www.xbotaodz.com",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "@js:\nvar u = '';\nif (params && params.queryInfo && params.queryInfo.chapterListUrl) u = String(params.queryInfo.chapterListUrl);\nif (!u && params && params.queryInfo && params.queryInfo.tocUrl) u = String(params.queryInfo.tocUrl);\nif (!u && params && params.queryInfo && params.queryInfo.detailUrl) u = String(params.queryInfo.detailUrl);\nif (!u && params && params.responseUrl) u = String(params.responseUrl);\nif (!u && typeof result === 'string' && result) u = result;\nif (/^\\/\\//.test(u)) u = 'http:' + u;\nif (/^\\//.test(u)) u = 'http://www.xbotaodz.com' + u;\nreturn u;",
+      "list": "//*[contains(concat(' ', normalize-space(@class), ' '), ' fulldir ')]//ul//li//a",
+      "title": ".//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "url": ".//@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.xbotaodz.com' + u; return u;"
+    },
+    "chapterContent": {
+      "actionID": "chapterContent",
+      "parserID": "DOM",
+      "host": "http://www.xbotaodz.com",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "content": "//*[@id='chaptercontent']//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').trim(); }).filter(function(s){ return s && !/快眼看书|最新网址|手机用户/.test(s); }).join('\\n\\n'); } return String(result || '').trim();"
+    }
+  },
+  "顶点小说-true": {
+    "sourceName": "顶点小说",
+    "sourceUrl": "http://www.23us.tw",
+    "sourceType": "text",
+    "enable": 1,
+    "weight": "9998",
+    "miniAppVersion": "2.56.1",
+    "lastModifyTime": "1775320061",
+    "searchBook": {
+      "actionID": "searchBook",
+      "parserID": "DOM",
+      "host": "http://www.23uswx.la",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "http://www.23uswx.la/modules/article/search.php?q=%@keyWord",
+      "list": "//*[contains(concat(' ', normalize-space(@class), ' '), ' grid ')]//tr[position()>1]",
+      "bookName": ".//td[1]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s && !/免费阅读|全文|最新章节|笔趣阁|小说/.test(s); }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": ".//td[3]//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "detailUrl": ".//td[1]//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.23uswx.la' + u; return u;",
+      "lastChapterTitle": ".//td[2]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM",
+      "host": "http://www.23uswx.la",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "bookName": "//*[@id='info']//h1[1]//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s && !/免费阅读|全文|最新章节|笔趣阁|小说/.test(s); }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": "//*[@id='info']//p[1]//text() ||@js:var s = Array.isArray(result) ? result.join(' ') : String(result || ''); return s.replace(/作\\s*者[:：]\\s*/, '').replace(/\\s+/g, ' ').trim();",
+      "desc": "//*[@id='intro']//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "cover": "//*[@id='fmimg']//img/@src ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.23uswx.la' + u; return u;",
+      "tocUrl": "//link[@rel='canonical']/@href ||@js: return String((params && params.responseUrl) || (Array.isArray(result) ? result[0] : result) || '').trim();"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "parserID": "DOM",
+      "host": "http://www.23uswx.la",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "@js:\nvar u = '';\nif (params && params.queryInfo && params.queryInfo.chapterListUrl) u = String(params.queryInfo.chapterListUrl);\nif (!u && params && params.queryInfo && params.queryInfo.tocUrl) u = String(params.queryInfo.tocUrl);\nif (!u && params && params.queryInfo && params.queryInfo.detailUrl) u = String(params.queryInfo.detailUrl);\nif (!u && params && params.responseUrl) u = String(params.responseUrl);\nif (!u && typeof result === 'string' && result) u = result;\nif (/^\\/\\//.test(u)) u = 'http:' + u;\nif (/^\\//.test(u)) u = 'http://www.23uswx.la' + u;\nreturn u;",
+      "list": "//*[@id='list']//dd",
+      "title": ".//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "url": ".//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.23uswx.la' + u; return u;"
+    },
+    "chapterContent": {
+      "actionID": "chapterContent",
+      "parserID": "DOM",
+      "host": "http://www.23uswx.la",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "content": "//*[@id='content']//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').trim(); }).filter(function(s){ return s && !/23us|顶点小说|最新网址|百度里搜索|请记住本书首发/.test(s); }).join('\\n\\n'); } return String(result || '').trim();"
+    }
+  },
+  "空白小说-true": {
+    "sourceName": "空白小说",
+    "sourceUrl": "http://www.swsk.org",
+    "sourceType": "text",
+    "enable": 1,
+    "weight": "9997",
+    "miniAppVersion": "2.56.1",
+    "lastModifyTime": "1775320061",
+    "searchBook": {
+      "actionID": "searchBook",
+      "parserID": "DOM",
+      "host": "http://www.35ge.info",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "http://www.swsk.org/modules/article/search.php?searchkey=%@keyWord",
+      "list": "//*[contains(concat(' ', normalize-space(@class), ' '), ' novelslist2 ')]//ul/li[position()>1]",
+      "bookName": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' s2 ')]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' s4 ')]//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "detailUrl": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' s2 ')]//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.35ge.info' + u; return u;",
+      "lastChapterTitle": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' s3 ')]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM",
+      "host": "http://www.35ge.info",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "bookName": "//meta[@property='og:title']/@content ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": "//meta[@property='og:novel:author']/@content ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "desc": "//meta[@property='og:description']/@content ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "cover": "//meta[@property='og:image']/@content ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.35ge.info' + u; return u;",
+      "tocUrl": "//link[@rel='canonical']/@href ||@js: return String((params && params.responseUrl) || (Array.isArray(result) ? result[0] : result) || '').trim();"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "parserID": "DOM",
+      "host": "http://www.35ge.info",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "@js:\nvar u = '';\nif (params && params.queryInfo && params.queryInfo.chapterListUrl) u = String(params.queryInfo.chapterListUrl);\nif (!u && params && params.queryInfo && params.queryInfo.tocUrl) u = String(params.queryInfo.tocUrl);\nif (!u && params && params.queryInfo && params.queryInfo.detailUrl) u = String(params.queryInfo.detailUrl);\nif (!u && params && params.responseUrl) u = String(params.responseUrl);\nif (!u && typeof result === 'string' && result) u = result;\nif (/^\\/\\//.test(u)) u = 'http:' + u;\nif (/^\\//.test(u)) u = 'http://www.35ge.info' + u;\nreturn u;",
+      "list": "//*[@id='list']//dd",
+      "title": ".//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "url": ".//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.35ge.info' + u; return u;"
+    },
+    "chapterContent": {
+      "actionID": "chapterContent",
+      "parserID": "DOM",
+      "host": "http://www.35ge.info",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "content": "//*[@id='content']//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').trim(); }).filter(function(s){ return s && !/最新网址|请记住|手机用户/.test(s); }).join('\\n\\n'); } return String(result || '').trim();"
+    }
+  },
+  "何以生肖-true": {
+    "sourceName": "何以生肖",
+    "sourceUrl": "http://www.yetianlian.net",
+    "sourceType": "text",
+    "enable": 1,
+    "weight": "9996",
+    "miniAppVersion": "2.56.1",
+    "lastModifyTime": "1775320061",
+    "searchBook": {
+      "actionID": "searchBook",
+      "parserID": "DOM",
+      "host": "http://www.yetianlian.net",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "http://www.yetianlian.net/s.php?ie=utf-8&q=%@keyWord",
+      "list": "//*[contains(concat(' ', normalize-space(@class), ' '), ' bookbox ')]",
+      "bookName": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' bookname ')]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' author ')]//text() ||@js:var s = Array.isArray(result) ? result.join(' ') : String(result || ''); return s.replace(/作者[:：]\\s*/, '').replace(/\\s+/g, ' ').trim();",
+      "cover": ".//img/@src ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.yetianlian.net' + u; return u;",
+      "detailUrl": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' bookname ')]//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.yetianlian.net' + u; return u;",
+      "lastChapterTitle": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' update ')]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM",
+      "host": "http://www.yetianlian.net",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "bookName": "//h2/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": "//*[contains(concat(' ', normalize-space(@class), ' '), ' small ')]//span[1]//text() ||@js:var s = Array.isArray(result) ? result.join(' ') : String(result || ''); return s.replace(/作者[:：]\\s*/, '').replace(/\\s+/g, ' ').trim();",
+      "desc": "//*[contains(concat(' ', normalize-space(@class), ' '), ' intro ')]//text() ||@js:var s = Array.isArray(result) ? result.join(' ') : String(result || ''); return s.replace(/简介[:：]?\\s*/, '').replace(/\\s+/g, ' ').trim();",
+      "cover": "//img/@src ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.yetianlian.net' + u; return u;",
+      "tocUrl": "//link[@rel='canonical']/@href ||@js: return String((params && params.responseUrl) || (Array.isArray(result) ? result[0] : result) || '').trim();"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "parserID": "DOM",
+      "host": "http://www.yetianlian.net",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "@js:\nvar u = '';\nif (params && params.queryInfo && params.queryInfo.chapterListUrl) u = String(params.queryInfo.chapterListUrl);\nif (!u && params && params.queryInfo && params.queryInfo.tocUrl) u = String(params.queryInfo.tocUrl);\nif (!u && params && params.queryInfo && params.queryInfo.detailUrl) u = String(params.queryInfo.detailUrl);\nif (!u && params && params.responseUrl) u = String(params.responseUrl);\nif (!u && typeof result === 'string' && result) u = result;\nif (/^\\/\\//.test(u)) u = 'http:' + u;\nif (/^\\//.test(u)) u = 'http://www.yetianlian.net' + u;\nreturn u;",
+      "list": "//*[contains(concat(' ', normalize-space(@class), ' '), ' listmain ')]//dd",
+      "title": ".//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "url": ".//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.yetianlian.net' + u; return u;"
+    },
+    "chapterContent": {
+      "actionID": "chapterContent",
+      "parserID": "DOM",
+      "host": "http://www.yetianlian.net",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "content": "//*[@id='content']//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').trim(); }).filter(function(s){ return s && !/请记住本书首发|yetianlian/.test(s); }).join('\\n\\n'); } return String(result || '').trim();"
+    }
+  },
+  "殓师灵异-true": {
+    "sourceName": "殓师灵异",
+    "sourceUrl": "http://www.rulianshi.org",
+    "sourceType": "text",
+    "enable": 1,
+    "weight": "9995",
+    "miniAppVersion": "2.56.1",
+    "lastModifyTime": "1775320061",
+    "searchBook": {
+      "actionID": "searchBook",
+      "parserID": "DOM",
+      "host": "http://www.rulianshi.net",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "http://www.rulianshi.net/s.php?ie=utf-8&q=%@keyWord",
+      "list": "//*[contains(concat(' ', normalize-space(@class), ' '), ' bookbox ')]",
+      "bookName": ".//h4//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' author ')]//text() ||@js:var s = Array.isArray(result) ? result.join(' ') : String(result || ''); return s.replace(/作者[:：]\\s*/, '').replace(/\\s+/g, ' ').trim();",
+      "cover": ".//img/@src ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.rulianshi.net' + u; return u;",
+      "detailUrl": ".//h4//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.rulianshi.net' + u; return u;",
+      "lastChapterTitle": ".//*[contains(concat(' ', normalize-space(@class), ' '), ' update ')]//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM",
+      "host": "http://www.rulianshi.net",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "bookName": "//h2/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "author": "//*[contains(concat(' ', normalize-space(@class), ' '), ' small ')]//span[1]//text() ||@js:var s = Array.isArray(result) ? result.join(' ') : String(result || ''); return s.replace(/作者[:：]\\s*/, '').replace(/\\s+/g, ' ').trim();",
+      "desc": "//*[contains(concat(' ', normalize-space(@class), ' '), ' intro ')]//text() ||@js:var s = Array.isArray(result) ? result.join(' ') : String(result || ''); return s.replace(/简介[:：]?\\s*/, '').replace(/\\s+/g, ' ').trim();",
+      "cover": "//*[contains(concat(' ', normalize-space(@class), ' '), ' cover ')]//img/@src ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.rulianshi.net' + u; return u;",
+      "tocUrl": "//link[@rel='canonical']/@href ||@js: return String((params && params.responseUrl) || (Array.isArray(result) ? result[0] : result) || '').trim();"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "parserID": "DOM",
+      "host": "http://www.rulianshi.net",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "@js:\nvar u = '';\nif (params && params.queryInfo && params.queryInfo.chapterListUrl) u = String(params.queryInfo.chapterListUrl);\nif (!u && params && params.queryInfo && params.queryInfo.tocUrl) u = String(params.queryInfo.tocUrl);\nif (!u && params && params.queryInfo && params.queryInfo.detailUrl) u = String(params.queryInfo.detailUrl);\nif (!u && params && params.responseUrl) u = String(params.responseUrl);\nif (!u && typeof result === 'string' && result) u = result;\nif (/^\\/\\//.test(u)) u = 'http:' + u;\nif (/^\\//.test(u)) u = 'http://www.rulianshi.net' + u;\nreturn u;",
+      "list": "//*[contains(concat(' ', normalize-space(@class), ' '), ' listmain ')]//dd",
+      "title": ".//a/text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim(); }).filter(function(s){ return s; }).join(' '); } return String(result || '').replace(/\\u00a0/g, ' ').replace(/\\s+/g, ' ').trim();",
+      "url": ".//a/@href ||@js:var u = Array.isArray(result) ? result[0] : result; u = String(u || '').trim(); if (/^\\/\\//.test(u)) return 'http:' + u; if (/^\\//.test(u)) return 'http://www.rulianshi.net' + u; return u;"
+    },
+    "chapterContent": {
+      "actionID": "chapterContent",
+      "parserID": "DOM",
+      "host": "http://www.rulianshi.net",
+      "validConfig": "",
+      "httpHeaders": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "requestInfo": "%@result",
+      "content": "//*[@id='content']//text() ||@js:if (Array.isArray(result)) { return result.map(function(s){ return String(s).replace(/\\u00a0/g, ' ').trim(); }).filter(function(s){ return s && !/请记住本书首发|rulianshi/.test(s); }).join('\\n\\n'); } return String(result || '').trim();"
+    }
+  }
+}

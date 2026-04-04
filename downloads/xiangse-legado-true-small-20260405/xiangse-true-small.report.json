@@ -1,0 +1,96 @@
+{
+  "generated_at": 1775320131,
+  "package_name": "xiangse_true_small",
+  "passed_count": 5,
+  "selected_count": 5,
+  "selection_policy": [
+    "仅保留 GET + HTML + 无登录 + 无 java/@js 依赖的上游 Legado 源",
+    "不做大批量机械映射，改为香色原生 XPath + 少量保守 requestInfo 兜底",
+    "每个源都用 simulate-live 实测搜索 -> 详情 -> 目录 -> 正文 四步"
+  ],
+  "artifacts": {
+    "xiangse_json": "/root/legado_xiangse_batch/out/xiangse_true_small.json",
+    "xiangse_xbs": "/root/legado_xiangse_batch/out/xiangse_true_small.xbs",
+    "roundtrip_json": "/root/legado_xiangse_batch/out/xiangse_true_small.roundtrip.json",
+    "report_json": "/root/legado_xiangse_batch/out/xiangse_true_small.report.json",
+    "summary_txt": "/root/legado_xiangse_batch/out/xiangse_true_small.summary.txt"
+  },
+  "selected_sources": [
+    {
+      "alias": "快眼看书-true",
+      "name": "快眼看书",
+      "search_ok": true,
+      "detail_ok": true,
+      "toc_ok": true,
+      "content_ok": true,
+      "search_url": "http://www.xbotaodz.com/modules/article/search.php?searchkey=斗罗大陆",
+      "detail_url": "http://www.xbotaodz.com/72581.html",
+      "toc_url": "http://www.xbotaodz.com/72581.html",
+      "chapter_url": "http://www.xbotaodz.com/novel/72581/read_1.html",
+      "search_list_len": 100,
+      "toc_list_len": 711,
+      "report_file": "/root/legado_xiangse_batch/out/快眼看书-true.sim.json"
+    },
+    {
+      "alias": "顶点小说-true",
+      "name": "顶点小说",
+      "search_ok": true,
+      "detail_ok": true,
+      "toc_ok": true,
+      "content_ok": true,
+      "search_url": "http://www.23uswx.la/modules/article/search.php?q=斗罗大陆",
+      "detail_url": "http://www.23uswx.la/0_80/",
+      "toc_url": "http://www.23uswx.la/0_80/",
+      "chapter_url": "http://www.23uswx.la/0_80/46124.html",
+      "search_list_len": 50,
+      "toc_list_len": 719,
+      "report_file": "/root/legado_xiangse_batch/out/顶点小说-true.sim.json"
+    },
+    {
+      "alias": "空白小说-true",
+      "name": "空白小说",
+      "search_ok": true,
+      "detail_ok": true,
+      "toc_ok": true,
+      "content_ok": true,
+      "search_url": "http://www.swsk.org/modules/article/search.php?searchkey=斗罗大陆",
+      "detail_url": "http://www.35ge.info/147/147964/",
+      "toc_url": "http://www.35ge.info/147/147964/",
+      "chapter_url": "http://www.35ge.info/xs/147/147964/52054833.html",
+      "search_list_len": 100,
+      "toc_list_len": 527,
+      "report_file": "/root/legado_xiangse_batch/out/空白小说-true.sim.json"
+    },
+    {
+      "alias": "何以生肖-true",
+      "name": "何以生肖",
+      "search_ok": true,
+      "detail_ok": true,
+      "toc_ok": true,
+      "content_ok": true,
+      "search_url": "http://www.yetianlian.net/s.php?ie=utf-8&q=斗罗大陆",
+      "detail_url": "http://www.yetianlian.net/yt329/",
+      "toc_url": "http://www.yetianlian.net/yt329/",
+      "chapter_url": "http://www.yetianlian.net/yt329/205763.html",
+      "search_list_len": 50,
+      "toc_list_len": 723,
+      "report_file": "/root/legado_xiangse_batch/out/何以生肖-true.sim.json"
+    },
+    {
+      "alias": "殓师灵异-true",
+      "name": "殓师灵异",
+      "search_ok": true,
+      "detail_ok": true,
+      "toc_ok": true,
+      "content_ok": true,
+      "search_url": "http://www.rulianshi.net/s.php?ie=utf-8&q=斗罗大陆",
+      "detail_url": "http://www.rulianshi.net/douluodalu/",
+      "toc_url": "http://www.rulianshi.net/douluodalu/",
+      "chapter_url": "http://www.rulianshi.net/douluodalu/72571.html",
+      "search_list_len": 100,
+      "toc_list_len": 723,
+      "report_file": "/root/legado_xiangse_batch/out/殓师灵异-true.sim.json"
+    }
+  ],
+  "previous_round_failure_cause": "上一轮主要是把 Legado 规则语法直接搬进香色，导入虽能成功，但香色运行时并不兼容这些 selector/replace 写法，所以实际链路跑不起来。"
+}

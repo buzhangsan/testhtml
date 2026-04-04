@@ -1,0 +1,18 @@
+Legado -> 香色 真能用小包
+
+实测通过: 5
+
+源列表:
+- 快眼看书 | 搜索=PASS 详情=PASS 目录=PASS 正文=PASS
+- 顶点小说 | 搜索=PASS 详情=PASS 目录=PASS 正文=PASS
+- 空白小说 | 搜索=PASS 详情=PASS 目录=PASS 正文=PASS
+- 何以生肖 | 搜索=PASS 详情=PASS 目录=PASS 正文=PASS
+- 殓师灵异 | 搜索=PASS 详情=PASS 目录=PASS 正文=PASS
+
+核心原因：
+上一轮主要是把 Legado 规则语法直接搬进香色，导入虽能成功，但香色运行时并不兼容这些 selector/replace 写法，所以实际链路跑不起来。
+
+产物：
+- xiangse_true_small.json
+- xiangse_true_small.xbs
+- xiangse_true_small.report.json
